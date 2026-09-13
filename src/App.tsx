@@ -1,9 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import "./App.css";
 import Banner from "./Components/Banner";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import type { Itechnology } from "./type/techType";
+import TechCardSection from "./Components/TechCardSection";
+import { toast } from "react-toastify";
 
 const techFetch = async (): Promise<Itechnology[]> => {
   const res = await fetch("/data.json");
@@ -14,6 +16,8 @@ const techFetch = async (): Promise<Itechnology[]> => {
 function App() {
   const [datas, setDatas] = useState<Itechnology[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
+  const [isEmpty, setIsEmpty] = useState<boolean>(true);
+   const [stack, setStack] = useState<Itechnology[]>([]);
 
   useEffect(() => {
     techFetch()
@@ -28,13 +32,13 @@ function App() {
     return <div>Loading...</div>;
   }
 
-  const isEmpty = true;
+
 
   return (
     <>
       <Navbar />
       <Banner />
-      <section className="lg:container mx-auto px-4 sm:px-6 lg:px-1 border my-20">
+      <section className="lg:container mx-auto px-4 sm:px-6 lg:px-1 my-20">
         {/* header text */}
         <div className="mb-6 sm:mb-8 text-center sm:text-left">
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
@@ -54,62 +58,7 @@ function App() {
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4 sm:gap-5">
             {datas.map((data) => {
               return (
-                <div
-                  key={data.id}
-                  className="w-full bg-white border border-slate-100 rounded-2xl p-6 flex flex-col justify-between shadow-sm hover:shadow-md transition-shadow duration-200"
-                >
-                  <div>
-                    <div className="flex items-center justify-between mb-5 h-8">
-                      <div className="w-9 h-9 flex items-center justify-center">
-                        <img
-                          src={data.icon}
-                          alt={data.name}
-                          className="w-full h-full object-contain"
-                        />
-                      </div>
-
-                      {data.badge ? (
-                        <span
-                          className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            data.bgBadgeColor || "bg-slate-100"
-                          } ${data.badgeColor || "text-slate-700"}`}
-                        >
-                          {data.badge}
-                        </span>
-                      ) : null}
-                    </div>
-
-                    <h3 className="text-xl font-bold text-slate-900 mb-2">
-                      {data.name}
-                    </h3>
-
-                    <p className="text-slate-400 text-sm leading-relaxed mb-6">
-                      {data.description}
-                    </p>
-                  </div>
-
-                  <div>
-                    <div className="flex items-center justify-between text-xs text-slate-500 mb-4 min-h-[28px]">
-                      <span className="bg-slate-100 text-slate-600 px-2.5 py-1 rounded-md font-medium">
-                        {data.category}
-                      </span>
-
-                      <span className="font-medium text-slate-500">
-                        {data.difficulty}
-                      </span>
-
-                      <div className="flex items-center space-x-1 font-semibold text-slate-700">
-                        <span className="text-amber-400 text-sm">★</span>
-                        <span>{data.rating}</span>
-                      </div>
-                    </div>
-
-                    {/* Action Button */}
-                    <button className="w-full cursor-pointer bg-[#0B0F19] hover:bg-slate-800 text-white font-medium py-3 rounded-xl transition-colors text-sm active:scale-[0.99]">
-                      Add to Stack
-                    </button>
-                  </div>
-                </div>
+                <TechCardSection key={data.id} data={data}></TechCardSection>
               );
             })}
           </div>
@@ -135,7 +84,7 @@ function App() {
               ) : (
                 <div className="mt-5">
                   <div className="flex flex-col gap-2.5 max-h-96 sm:max-h-120 lg:max-h-140 overflow-y-auto pr-1">
-                    {/* {stack.map((item) => (
+                    {stack.map((item) => (
                       <div
                         key={item.id}
                         className="flex items-center justify-between p-3 rounded-xl border border-slate-200 bg-white shadow-xs transition-all duration-200 ease-out hover:border-slate-300"
@@ -164,7 +113,7 @@ function App() {
                           ✕
                         </button>
                       </div>
-                    ))} */}
+                    ))}
                   </div>
 
                   <button
