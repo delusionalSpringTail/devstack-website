@@ -9,7 +9,8 @@
     "difficulty": "Beginner-Friendly",
     "badge": "Popular",
     "badgeColor": "text-sky-500",
-    "bgBadgeColor": "bg-sky-50"
+    "bgBadgeColor": "bg-sky-50",
+    "badgeBorder": "border border-sky-500"
   },
   {
     "id": "2",
@@ -21,7 +22,8 @@
     "difficulty": "Beginner-Friendly",
     "badge": "Versatile",
     "badgeColor": "text-emerald-500",
-    "bgBadgeColor": "bg-emerald-50"
+    "bgBadgeColor": "bg-emerald-50",
+    "badgeBorder": "border border-emerald-500"
   },
   {
     "id": "3",
@@ -33,7 +35,8 @@
     "difficulty": "Intermediate",
     "badge": "Fast",
     "badgeColor": "text-orange-500",
-    "bgBadgeColor": "bg-orange-50"
+    "bgBadgeColor": "bg-orange-50",
+    "badgeBorder": "border border-orange-500"
   },
   {
     "id": "4",
@@ -45,7 +48,8 @@
     "difficulty": "Intermediate",
     "badge": "",
     "badgeColor": "",
-    "bgBadgeColor": ""
+    "bgBadgeColor": "",
+    "badgeBorder": ""
   },
   {
     "id": "5",
@@ -57,7 +61,8 @@
     "difficulty": "Intermediate",
     "badge": "Standard",
     "badgeColor": "text-emerald-500",
-    "bgBadgeColor": "bg-emerald-50"
+    "bgBadgeColor": "bg-emerald-50",
+    "badgeBorder": "border border-emerald-500"
   },
   {
     "id": "6",
@@ -69,7 +74,8 @@
     "difficulty": "Intermediate",
     "badge": "Top SQL",
     "badgeColor": "text-blue-500",
-    "bgBadgeColor": "bg-blue-50"
+    "bgBadgeColor": "bg-blue-50",
+    "badgeBorder": "border border-blue-500"
   },
   {
     "id": "7",
@@ -81,7 +87,8 @@
     "difficulty": "Intermediate",
     "badge": "Cache",
     "badgeColor": "text-red-500",
-    "bgBadgeColor": "bg-red-50"
+    "bgBadgeColor": "bg-red-50",
+    "badgeBorder": "border border-red-500"
   },
   {
     "id": "8",
@@ -93,7 +100,8 @@
     "difficulty": "Beginner-Friendly",
     "badge": "Ubiquitous",
     "badgeColor": "text-amber-600",
-    "bgBadgeColor": "bg-amber-50"
+    "bgBadgeColor": "bg-amber-50",
+    "badgeBorder": "border border-amber-600"
   },
   {
     "id": "9",
@@ -105,7 +113,8 @@
     "difficulty": "Intermediate",
     "badge": "Essential",
     "badgeColor": "text-blue-600",
-    "bgBadgeColor": "bg-blue-50"
+    "bgBadgeColor": "bg-blue-50",
+    "badgeBorder": "border border-blue-600"
   },
   {
     "id": "10",
@@ -117,7 +126,8 @@
     "difficulty": "Intermediate",
     "badge": "Robust",
     "badgeColor": "text-sky-500",
-    "bgBadgeColor": "bg-sky-50"
+    "bgBadgeColor": "bg-sky-50",
+    "badgeBorder": "border border-sky-500"
   },
   {
     "id": "11",
@@ -129,7 +139,8 @@
     "difficulty": "Beginner-Friendly",
     "badge": "Modern",
     "badgeColor": "text-teal-500",
-    "bgBadgeColor": "bg-teal-50"
+    "bgBadgeColor": "bg-teal-50",
+    "badgeBorder": "border border-teal-500"
   },
   {
     "id": "12",
@@ -141,6 +152,7 @@
     "difficulty": "Intermediate",
     "badge": "Containers",
     "badgeColor": "text-sky-600",
-    "bgBadgeColor": "bg-sky-50"
+    "bgBadgeColor": "bg-sky-50",
+    "badgeBorder": "border border-sky-600"
   }
 ]

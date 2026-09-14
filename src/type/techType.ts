@@ -6,7 +6,8 @@ export interface Itechnology {
   icon: string;
   rating: number;
   difficulty: string;
-  badge: string;
-  badgeColor: string;
-  bgBadgeColor: string;
+  badge?: string;
+  badgeColor?: string;
+  bgBadgeColor?: string;
+  badgeBorder?: string;
 }
